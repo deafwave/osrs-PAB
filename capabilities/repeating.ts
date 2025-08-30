@@ -1,10 +1,13 @@
-{
+import type { RepeatingConfig } from './types';
+
+export const repeatingConfig: RepeatingConfig = {
   "BIRDHOUSES": {
     "syntax": "REPEATING:BIRDHOUSES:HUNTERLVL",
     "description": "Does birdhouse runs between tasks until target Hunter level is reached",
     "requirements": {
       "quests": ["BONE_VOYAGE"],
-      "skills": {"hunter": 9}
+      "skills": {"hunter": 9},
+      "other": []
     },
     "notes": ["Passive XP between other activities", "Requires bird nests and logs"]
   },
@@ -13,7 +16,8 @@
     "description": "Does tree runs between tasks until target Farming level is reached",
     "requirements": {
       "quests": ["RFD_GOBLINS", "FAIRYTALE_I"],
-      "skills": {"farming": 15}
+      "skills": {"farming": 15},
+      "other": []
     },
     "notes": ["High XP/run but expensive", "Requires tree seeds and payment items"]
   },
@@ -21,7 +25,9 @@
     "syntax": "REPEATING:HERB_RUNS:FARMINGLVL",
     "description": "Does herb runs between tasks until target Farming level is reached", 
     "requirements": {
-      "skills": {"farming": 38}
+      "quests": [],
+      "skills": {"farming": 38},
+      "other": []
     },
     "notes": ["Profitable farming method", "Requires herb seeds and compost"]
   },
@@ -30,7 +36,8 @@
     "description": "Does seaweed runs until target Farming level is reached",
     "requirements": {
       "quests": ["BONE_VOYAGE"],
-      "skills": {"farming": 22}
+      "skills": {"farming": 22},
+      "other": []
     },
     "notes": ["Underwater farming patches", "Requires giant seaweed seeds"]
   },
@@ -39,7 +46,8 @@
     "description": "Does compost bin runs until Tool Leprechaun contains ~800+ ultra compost",
     "requirements": {
       "quests": ["BONE_VOYAGE"],
-      "skills": {"farming": 22}
+      "skills": {"farming": 22},
+      "other": []
     },
     "notes": ["Primarily for ironmen", "Creates ultracompost for farming efficiency"]
   },
@@ -47,9 +55,11 @@
     "syntax": "REPEATING:HESPORI",
     "description": "Plants and kills Hespori for farming XP and seeds",
     "requirements": {
+      "quests": [],
       "skills": {"farming": 65, "magic": 59},
-      "items": ["prayer_potion"]
+      "other": []
     },
+    "items": ["prayer_potion"],
     "combat": {
       "magic": "fire_spells",
       "melee": "knives_for_plants"
@@ -60,7 +70,9 @@
     "syntax": "REPEATING:KINGDOM[:WORKER1:WORKER2]",
     "description": "Manages Kingdom of Miscellania worker allocation",
     "requirements": {
-      "quests": ["THRONE_OF_MISCELLANIA"]
+      "quests": ["THRONE_OF_MISCELLANIA"],
+      "skills": {},
+      "other": []
     },
     "worker_options": ["HERB", "MINE", "WOOD", "TEAK", "MAHOG", "FISH", "FARM"],
     "worker_allocation": {
@@ -74,4 +86,4 @@
     },
     "notes": ["Primarily for ironmen", "Provides passive resource generation", "Requires daily maintenance"]
   }
-}
+};

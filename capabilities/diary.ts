@@ -1,4 +1,6 @@
-{
+import type { DiaryConfig } from './types';
+
+export const diaryConfig: DiaryConfig = {
   "VARROCK_EASY": {
     "requirements": {
       "skills": {
@@ -59,4 +61,4 @@
       }
     }
   }
-}
+};

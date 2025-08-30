@@ -1,8 +1,10 @@
-{
+import type { SkillsConfig } from './types';
+
+export const skillsConfig: SkillsConfig = {
   "firemaking": {
     "methods": ["burn_logs", "wintertodt"],
     "quest_skip": ["SEA_SLUG"],
-    "wintertodt_req": {"firemaking": 50}
+    "wintertodt_requirements": {"firemaking": 50}
   },
   "crafting": {
     "methods": ["glassblowing", "gem_cutting"],
@@ -19,7 +21,7 @@
       "20-99": "trout_salmon",
       "58-99": "barbarian_fishing"
     },
-    "barbarian_req": {"strength": 30, "agility": 30}
+    "barbarian_requirements": {"strength": 30, "agility": 30}
   },
   "magic": {
     "methods": ["enchanting", "alching_teleports"],
@@ -55,8 +57,8 @@
       "45-99": "blackjacking",
       "45-99_varlamore": "varlamore_thieving"
     },
-    "fruit_stalls_req": {"quests": ["CLIENT_OF_KOUREND"]},
-    "blackjacking_req": {"quests": ["THE_FEUD"]},
+    "fruit_stalls_requirements": {"skills": {}, "quests": ["CLIENT_OF_KOUREND"], "other": []},
+    "blackjacking_requirements": {"skills": {}, "quests": ["THE_FEUD"], "other": []},
     "parameters": {
       "BJ": "Force blackjacking method (e.g. SKILL:THIEVING:99:BJ)",
       "VARLAMORE": "Force varlamore thieving method (e.g. SKILL:THIEVING:99:VARLAMORE)"
@@ -105,7 +107,7 @@
       "1-27": "air_tiaras",
       "27-99": "gotr"
     },
-    "gotr_req": {"quests": ["TEMPLE_OF_THE_EYE"]}
+    "gotr_requirements": {"skills": {}, "quests": ["TEMPLE_OF_THE_EYE"], "other": []}
   },
   "attack": {
     "methods": ["sand_crabs"],
@@ -137,13 +139,13 @@
       "30-40_ironman": "blast_furnace_steel",
       "40-99": "blast_furnace_gold"
     },
-    "blast_furnace_req": {"mining": 50},
-    "steel_req": {"other": ["coal_bag"]},
-    "gold_benefits": {"quests": ["FAMILY_CREST"]}
+    "blast_furnace_requirements": {"mining": 50},
+    "steel_requirements": {"other": ["coal_bag"]},
+    "gold_benefits": {"skills": {}, "quests": ["FAMILY_CREST"], "other": []}
   },
   "construction": {
     "methods": ["mahogany_homes"],
-    "req": {"quests": ["PLAGUE_CITY"]}
+    "requirements": {"skills": {}, "quests": ["PLAGUE_CITY"], "other": []}
   },
   "farming": {
     "methods": ["bagged_plants", "farm_runs"],
@@ -152,4 +154,4 @@
       "ongoing": "farm_runs"
     }
   }
-}
+};

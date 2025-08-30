@@ -1,16 +1,18 @@
-{
+import type { MinigamesConfig } from './types';
+
+export const minigamesConfig: MinigamesConfig = {
   "WINTERTODT": {
-    "req": {"firemaking": 50},
+    "requirements": {"skills": {"firemaking": 50}, "quests": [], "other": []},
     "rewards": ["firemaking_xp", "pyromancer_outfit", "supplies"],
     "auto_rewards": {"conditions": ["<500k_gp", "<4_pyro_pieces"]}
   },
   "MLM": {
-    "req": {"mining": 30},
+    "requirements": {"skills": {"mining": 30}, "quests": [], "other": []},
     "targets": ["level", "COALBAG", "GEMBAG", "SET", "HAT", "TOP", "LEGS", "BOOTS"],
     "auto_unlocks": {"on_level_target": ["coal_bag", "upper_level", "upper_hopper"]}
   },
   "MTA": {
-    "req": {"magic": "variable"},
+    "requirements": {"skills": {"magic": "variable" as any}, "quests": [], "other": []},
     "presets": {
       "GREENLOG": ["all_rewards"],
       "EFFICIENT": ["B2P", "master_wand", "mages_book", "infinity_boots"],
@@ -20,7 +22,7 @@
   },
   "GUARDIANS_OF_THE_RIFT": {
     "integrated_into": "SKILL:RUNECRAFTING",
-    "req": {"runecrafting": 27, "quests": ["TEMPLE_OF_THE_EYE"]},
+    "requirements": {"skills": {"runecrafting": 27}, "quests": ["TEMPLE_OF_THE_EYE"], "other": []},
     "auto_enabled": true
   }
-}
+};
