@@ -12,9 +12,9 @@ export type AllSkillNames = SkillName | SpecialSkillRequirement;
 
 // Requirements structure (standardized across all capabilities)
 export interface Requirements {
-  skills: Partial<Record<AllSkillNames, number>>;
-  quests: string[];
-  other: string[];
+  skills?: Partial<Record<AllSkillNames, number>>;
+  quests?: string[];
+  other?: string[];
 }
 
 // Quest data structure
@@ -28,22 +28,12 @@ export interface QuestsConfig {
 
 // Skill training method configuration
 export interface SkillMethodConfig {
-  methods: string[];
-  quest_skip?: string[];
-  level_splits?: Record<string, string>;
+  methods: {
+      name: string
+      requirements: Requirements;
+  }[];
+  suggested_quests?: string[];
   parameters?: Record<string, string>;
-  special_modes?: string[];
-  rewards?: string[];
-  requirements?: Requirements;
-  wintertodt_requirements?: Partial<Record<SkillName, number>>;
-  barbarian_requirements?: Partial<Record<SkillName, number>>;
-  fruit_stalls_requirements?: Requirements;
-  blackjacking_requirements?: Requirements;
-  gotr_requirements?: Requirements;
-  blast_furnace_requirements?: Partial<Record<SkillName, number>>;
-  steel_requirements?: { other: string[] };
-  gold_benefits?: Requirements;
-  alching?: { min_magic: number };
 }
 
 export interface SkillsConfig {

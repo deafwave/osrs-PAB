@@ -2,156 +2,464 @@ import type { SkillsConfig } from './types';
 
 export const skillsConfig: SkillsConfig = {
   "firemaking": {
-    "methods": ["burn_logs", "wintertodt"],
-    "quest_skip": ["SEA_SLUG"],
-    "wintertodt_requirements": {"firemaking": 50}
+    methods: [{
+      name: "burn_logs",
+      requirements: {
+        skills: {
+          firemaking: 1
+        }
+      },
+    },
+    {
+      name: "wintertodt",
+      requirements: {
+        skills: {
+          firemaking: 50
+        }
+      }
+    }],
+    suggested_quests: ["SEA_SLUG"],
   },
   "crafting": {
-    "methods": ["glassblowing", "gem_cutting"],
-    "level_splits": {
-      "1-20": "glassblowing",
-      "20-99": "gem_cutting"
-    }
+    methods: [{
+      name: "glassblowing",
+      requirements: {
+        skills: {
+          crafting: 1
+        }
+      }
+    },
+    {
+      name: "gem_cutting",
+      requirements: {
+        skills: {
+          crafting: 20
+        }
+      }
+    }]
   },
   "fishing": {
-    "methods": ["shrimps_anchovies", "trout_salmon", "barbarian_fishing"],
-    "quest_skip": ["SEA_SLUG"],
-    "level_splits": {
-      "1-20": "shrimps_anchovies",
-      "20-99": "trout_salmon",
-      "58-99": "barbarian_fishing"
+    methods: [{
+      name: "shrimps_anchovies",
+      requirements: {
+        skills: {
+          fishing: 1
+        }
+      }
     },
-    "barbarian_requirements": {"strength": 30, "agility": 30}
+    {
+      name: "trout_salmon",
+      requirements: {
+        skills: {
+          fishing: 20
+        }
+      }
+    },
+    {
+      name: "barbarian_fishing",
+      requirements: {
+        skills: {
+          fishing: 58,
+          strength: 30,
+          agility: 30
+        }
+      }
+    }],
+    suggested_quests: ["SEA_SLUG"]
   },
   "magic": {
-    "methods": ["enchanting", "alching_teleports"],
-    "quest_skip": ["WITCHS_POTION", "IMP_CATCHER"],
-    "level_splits": {
-      "1-7": "use_quests",
-      "7-55": "enchanting",
-      "55-99": "alching_teleports"
-    }
+    methods: [{
+      name: "use_quests",
+      requirements: {
+        skills: {
+          magic: 1
+        }
+      }
+    },
+    {
+      name: "enchanting",
+      requirements: {
+        skills: {
+          magic: 7
+        }
+      }
+    },
+    {
+      name: "alching_teleports",
+      requirements: {
+        skills: {
+          magic: 55
+        }
+      }
+    }],
+    suggested_quests: ["WITCHS_POTION", "IMP_CATCHER"]
   },
   "prayer": {
-    "methods": ["dragon_bones_altar", "blessed_bone_shards"],
-    "level_splits": {
-      "1-99": "dragon_bones_altar",
-      "30-99_ironman": "blessed_bone_shards"
-    }
+    methods: [{
+      name: "dragon_bones_altar",
+      requirements: {
+        skills: {
+          prayer: 1
+        }
+      }
+    },
+    {
+      name: "blessed_bone_shards",
+      requirements: {
+        skills: {
+          prayer: 30
+        }
+      }
+    }]
   },
   "herblore": {
-    "methods": ["attack_potions", "energy_potions", "prayer_potions", "super_energy_potions"],
-    "level_splits": {
-      "3-26": "attack_potions",
-      "26-38": "energy_potions", 
-      "38-52": "prayer_potions",
-      "52-99": "super_energy_potions"
-    }
+    methods: [{
+      name: "attack_potions",
+      requirements: {
+        skills: {
+          herblore: 3
+        }
+      }
+    },
+    {
+      name: "energy_potions",
+      requirements: {
+        skills: {
+          herblore: 26
+        }
+      }
+    },
+    {
+      name: "prayer_potions",
+      requirements: {
+        skills: {
+          herblore: 38
+        }
+      }
+    },
+    {
+      name: "super_energy_potions",
+      requirements: {
+        skills: {
+          herblore: 52
+        }
+      }
+    }]
   },
   "thieving": {
-    "methods": ["pickpocket_men", "cake_stall", "fruit_stalls", "blackjacking", "varlamore_thieving"],
-    "level_splits": {
-      "1-5": "pickpocket_men",
-      "5-25": "cake_stall",
-      "25-45": "fruit_stalls",
-      "45-99": "blackjacking",
-      "45-99_varlamore": "varlamore_thieving"
+    methods: [{
+      name: "pickpocket_men",
+      requirements: {
+        skills: {
+          thieving: 1
+        }
+      }
     },
-    "fruit_stalls_requirements": {"skills": {}, "quests": ["CLIENT_OF_KOUREND"], "other": []},
-    "blackjacking_requirements": {"skills": {}, "quests": ["THE_FEUD"], "other": []},
-    "parameters": {
+    {
+      name: "cake_stall",
+      requirements: {
+        skills: {
+          thieving: 5
+        }
+      }
+    },
+    {
+      name: "fruit_stalls",
+      requirements: {
+        skills: {
+          thieving: 25
+        },
+        quests: ["CLIENT_OF_KOUREND"]
+      }
+    },
+    {
+      name: "blackjacking",
+      requirements: {
+        skills: {
+          thieving: 45
+        },
+        quests: ["THE_FEUD"]
+      }
+    },
+    {
+      name: "varlamore_thieving",
+      requirements: {
+        skills: {
+          thieving: 45
+        }
+      }
+    }],
+    parameters: {
       "BJ": "Force blackjacking method (e.g. SKILL:THIEVING:99:BJ)",
       "VARLAMORE": "Force varlamore thieving method (e.g. SKILL:THIEVING:99:VARLAMORE)"
     }
   },
   "woodcutting": {
-    "methods": ["oaks", "teaks"],
-    "level_splits": {
-      "1-35": "oaks",
-      "35-99": "teaks"
-    }
+    methods: [{
+      name: "oaks",
+      requirements: {
+        skills: {
+          woodcutting: 1
+        }
+      }
+    },
+    {
+      name: "teaks",
+      requirements: {
+        skills: {
+          woodcutting: 35
+        }
+      }
+    }]
   },
   "mining": {
-    "methods": ["copper", "iron_isle", "iron_guild", "mlm"],
-    "level_splits": {
-      "1-15": "copper",
-      "15-60": "iron_isle",
-      "60-99": "iron_guild",
-      "30-99_optional": "mlm"
-    }
+    methods: [{
+      name: "copper",
+      requirements: {
+        skills: {
+          mining: 1
+        }
+      }
+    },
+    {
+      name: "iron_isle",
+      requirements: {
+        skills: {
+          mining: 15
+        }
+      }
+    },
+    {
+      name: "iron_guild",
+      requirements: {
+        skills: {
+          mining: 60
+        }
+      }
+    },
+    {
+      name: "mlm",
+      requirements: {
+        skills: {
+          mining: 30
+        }
+      }
+    }]
   },
   "cooking": {
-    "methods": ["fish_rogues", "wine_ge"],
-    "level_splits": {
-      "1-35": "fish_rogues",
-      "35-99": "wine_ge"
-    }
+    methods: [{
+      name: "fish_rogues",
+      requirements: {
+        skills: {
+          cooking: 1
+        }
+      }
+    },
+    {
+      name: "wine_ge",
+      requirements: {
+        skills: {
+          cooking: 35
+        }
+      }
+    }]
   },
   "agility": {
-    "methods": ["courses_progressive"],
-    "rewards": ["graceful_outfit"],
-    "alching": {"min_magic": 21}
+    methods: [{
+      name: "courses_progressive",
+      requirements: {
+        skills: {
+          agility: 1
+        }
+      }
+    }]
   },
   "fletching": {
-    "methods": ["headless_arrows", "stringing_low", "stringing_high"],
-    "level_splits": {
-      "1-10": "headless_arrows",
-      "10-50": "stringing_low",
-      "50-99": "stringing_high"
-    }
+    methods: [{
+      name: "headless_arrows",
+      requirements: {
+        skills: {
+          fletching: 1
+        }
+      }
+    },
+    {
+      name: "stringing_low",
+      requirements: {
+        skills: {
+          fletching: 10
+        }
+      }
+    },
+    {
+      name: "stringing_high",
+      requirements: {
+        skills: {
+          fletching: 50
+        }
+      }
+    }]
   },
   "runecrafting": {
-    "methods": ["air_runes_ironman", "air_tiaras", "gotr"],
-    "level_splits": {
-      "1-10_ironman": "air_runes_ironman",
-      "1-27": "air_tiaras",
-      "27-99": "gotr"
+    methods: [{
+      name: "air_runes_ironman",
+      requirements: {
+        skills: {
+          runecrafting: 1
+        }
+      }
     },
-    "gotr_requirements": {"skills": {}, "quests": ["TEMPLE_OF_THE_EYE"], "other": []}
+    {
+      name: "air_tiaras",
+      requirements: {
+        skills: {
+          runecrafting: 1
+        }
+      }
+    },
+    {
+      name: "gotr",
+      requirements: {
+        skills: {
+          runecrafting: 27
+        },
+        quests: ["TEMPLE_OF_THE_EYE"]
+      }
+    }]
   },
   "attack": {
-    "methods": ["sand_crabs"],
-    "special_modes": ["no_hp"]
+    methods: [{
+      name: "sand_crabs",
+      requirements: {
+        skills: {
+          attack: 1
+        }
+      }
+    }]
   },
   "strength": {
-    "methods": ["sand_crabs"],
-    "special_modes": ["no_hp"]
+    methods: [{
+      name: "sand_crabs",
+      requirements: {
+        skills: {
+          strength: 1
+        }
+      }
+    },{
+      name: "blast_furnace",
+      requirements: {
+        skills: {
+          strength: 1
+        }
+      }
+    }],
+    parameters: {
+      "NO_HP": "Train without gaining HP XP"
+    }
   },
   "defence": {
-    "methods": ["sand_crabs"]
+    methods: [{
+      name: "sand_crabs",
+      requirements: {
+        skills: {
+          defence: 1
+        }
+      }
+    }]
   },
   "ranged": {
-    "methods": ["sand_crabs"]
+    methods: [{
+      name: "sand_crabs",
+      requirements: {
+        skills: {
+          ranged: 1
+        }
+      }
+    }]
   },
   "hunter": {
-    "methods": ["crimson_swifts", "copper_longtails", "ruby_harvest", "falconry"],
-    "level_splits": {
-      "1-9": "crimson_swifts",
-      "9-15": "copper_longtails", 
-      "15-43": "ruby_harvest",
-      "43-99": "falconry"
-    }
+    methods: [{
+      name: "crimson_swifts",
+      requirements: {
+        skills: {
+          hunter: 1
+        }
+      }
+    },
+    {
+      name: "copper_longtails",
+      requirements: {
+        skills: {
+          hunter: 9
+        }
+      }
+    },
+    {
+      name: "ruby_harvest",
+      requirements: {
+        skills: {
+          hunter: 15
+        }
+      }
+    },
+    {
+      name: "falconry",
+      requirements: {
+        skills: {
+          hunter: 43
+        }
+      }
+    }]
   },
   "smithing": {
-    "methods": ["anvil", "blast_furnace_steel", "blast_furnace_gold"],
-    "level_splits": {
-      "1-40": "anvil",
-      "30-40_ironman": "blast_furnace_steel",
-      "40-99": "blast_furnace_gold"
+    methods: [{
+      name: "anvil",
+      requirements: {
+        skills: {
+          smithing: 1
+        }
+      }
     },
-    "blast_furnace_requirements": {"mining": 50},
-    "steel_requirements": {"other": ["coal_bag"]},
-    "gold_benefits": {"skills": {}, "quests": ["FAMILY_CREST"], "other": []}
+    {
+      name: "blast_furnace_steel",
+      requirements: {
+        skills: {
+          smithing: 30,
+          mining: 50
+        },
+        other: ["coal_bag"]
+      }
+    },
+    {
+      name: "blast_furnace_gold",
+      requirements: {
+        skills: {
+          smithing: 40,
+          mining: 50
+        }
+      }
+    }],
+    suggested_quests: ["FAMILY_CREST"]
   },
   "construction": {
-    "methods": ["mahogany_homes"],
-    "requirements": {"skills": {}, "quests": ["PLAGUE_CITY"], "other": []}
+    methods: [{
+      name: "mahogany_homes",
+      requirements: {
+        skills: {
+          construction: 1
+        },
+        quests: ["PLAGUE_CITY"]
+      }
+    }]
   },
   "farming": {
-    "methods": ["bagged_plants", "farm_runs"],
-    "level_splits": {
-      "1-36": "bagged_plants",
-      "ongoing": "farm_runs"
-    }
+    methods: [{
+      name: "bagged_plants",
+      requirements: {
+        skills: {
+          farming: 1
+        }
+      }
+    }]
   }
 };
