@@ -100,7 +100,7 @@ export const questsConfig: QuestsConfig = {
   "THE_CORSAIR_CURSE": {"requirements": {"skills": {}, "quests": [], "other": []}},
   "FAMILY_CREST": {"requirements": {"skills": {"mining": 40, "smithing": 40, "magic": 59, "crafting": 40}, "quests": [], "other": []}},
   "THE_GARDEN_OF_DEATH": {"requirements": {"skills": {"farming": 20}, "quests": [], "other": []}},
-  "MONKEY_MADNESS_I": {"requirements": {"skills": {"prayer": 43}, "quests": ["THE_GRAND_TREE", "TREE_GNOME_VILLAGE"], "other": []}},
+  "MONKEY_MADNESS_I": {"requirements": {"skills": {"prayer": 43}, "quests": ["THE_GRAND_TREE", "TREE_GNOME_VILLAGE"], "other": []}, "parameters": {"TAKEXP": "Claim XP reward"}},
   "THE_FORSAKEN_TOWER": {"requirements": {"skills": {}, "quests": ["CLIENT_OF_KOUREND"], "other": []}},
   "HAUNTED_MINE": {"requirements": {"skills": {"magic": 39, "hitpoints": 28, "crafting": 35}, "quests": ["PRIEST_IN_PERIL", "THE_RESTLESS_GHOST"], "other": ["Higher hitpoints recommended"]}},
   "TALE_OF_THE_RIGHTEOUS": {"requirements": {"skills": {"strength": 16, "mining": 10}, "quests": ["CLIENT_OF_KOUREND"], "other": ["Stats to mage a 46cb lizard"]}},

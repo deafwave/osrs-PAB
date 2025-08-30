@@ -20,6 +20,7 @@ export interface Requirements {
 // Quest data structure
 export interface QuestData {
   requirements: Requirements;
+  parameters?: Record<string, string>;
 }
 
 export interface QuestsConfig {
@@ -98,9 +99,7 @@ export interface OtherConfig {
 // Repeating task configuration
 export interface RepeatingTaskData {
   syntax: string;
-  description: string;
   requirements: Requirements;
-  notes?: string[];
   items?: string[];
   combat?: {
     magic?: string;
@@ -112,7 +111,6 @@ export interface RepeatingTaskData {
     pre_royal_trouble?: string;
     no_parameters?: string;
   };
-  examples?: Record<string, string>;
 }
 
 export interface RepeatingConfig {
