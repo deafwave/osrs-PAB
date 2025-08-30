@@ -54,10 +54,6 @@ See individual skill modules for complete method breakdowns and level splits.
 ### Basic Syntax
 `QUEST:QUESTNAME`
 
-### XP Reward Claims
-`QUEST:QUESTNAME:TAKEXP` - Claim experience rewards from quest
-- Example: `QUEST:MONKEY_MADNESS_I:TAKEXP`
-
 ### Common Quests for XP Skips
 - `QUEST:SEA_SLUG` - Skip firemaking/fishing levels 1-20
 - `QUEST:WITCHS_POTION` and `QUEST:IMP_CATCHER` - Skip magic levels 1-9
