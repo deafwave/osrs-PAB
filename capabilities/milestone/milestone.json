@@ -1,0 +1,32 @@
+{
+  "DRAGON_DEFENDER": {
+    "req": {"attack_strength_combined": 130},
+    "location": "warriors_guild",
+    "rewards": ["dragon_defender"]
+  },
+  "RUNE_DEFENDER": {
+    "req": {"attack_strength_combined": 130},
+    "location": "warriors_guild", 
+    "account_types": ["zerker"],
+    "rewards": ["rune_defender"]
+  },
+  "FAIRY_RINGS": {
+    "req": {"quests": ["FAIRYTALE_I"]},
+    "unlocks": ["fairy_ring_network"],
+    "completion": "partial_fairytale_ii"
+  },
+  "UNLOCK_PIETY": {
+    "req": {"quests": ["KINGS_RANSOM"], "attack": 60, "strength": 50},
+    "unlocks": ["chivalry", "piety"],
+    "completion": "knight_waves_training_grounds"
+  },
+  "ROGUES_OUTFIT": {
+    "req": {"agility": 50, "thieving": 50},
+    "location": "rogues_den",
+    "rewards": ["full_rogues_outfit"]
+  },
+  "ROCK_CAKE": {
+    "req": {"quests": ["RFD_DWARF"]},
+    "rewards": ["dwarven_rock_cake"]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "VARROCK_EASY": {
+    "requirements": {
+      "skills": {
+        "agility": 13,
+        "mining": 15,
+        "fishing": 20,
+        "thieving": 5,
+        "crafting": 8,
+        "runecrafting": 9
+      },
+      "other": {
+        "museum_kudos": 50
+      }
+    }
+  },
+  "ARDOUGNE_EASY": {
+    "requirements": {
+      "skills": {
+        "thieving": 5
+      },
+      "quests": [
+        "BIOHAZARD",
+        "RUNE_MYSTERIES"
+      ]
+    }
+  },
+  "LUMBRIDGE_EASY": {
+    "requirements": {
+      "skills": {
+        "slayer": 7,
+        "runecrafting": 5,
+        "woodcutting": 15,
+        "firemaking": 15,
+        "mining": 15
+      },
+      "quests": [
+        "COOKS_ASSISTANT"
+      ]
+    }
+  },
+  "LUMBRIDGE_MEDIUM": {
+    "requirements": {
+      "skills": {
+        "agility": 20,
+        "ranged": 50,
+        "fishing": 30,
+        "crafting": 38,
+        "woodcutting": 30,
+        "thieving": 38,
+        "hunter": 42,
+        "runecrafting": 23
+      },
+      "quests": [
+        "FAIRYTALE_I_GROWING_PAINS"
+      ],
+      "other": {
+        "ironman_requirements": "ability to make mithril grapple"
+      }
+    }
+  }
+}
