@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:oldschool.runescape.wiki)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
