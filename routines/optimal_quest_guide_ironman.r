@@ -44,7 +44,7 @@ QUEST:PLAGUE_CITY
 
 QUEST:BIOHAZARD
 
-# Easy Ardougne Diary - diary system not implemented yet
+DIARY:ARDOUGNE_EASY
 
 QUEST:FIGHT_ARENA
 
@@ -257,7 +257,7 @@ QUEST:ZOGRE_FLESH_EATERS
 
 SKILL:HERBLORE:30
 
-# Easy Varrock Diary - diary system not implemented
+DIARY:VARROCK_EASY
 
 # Easy Desert Diary - diary system not implemented
 
