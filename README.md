@@ -67,7 +67,6 @@ PAB uses a structured task format to define account progression:
 - **Specialized builds** - Zerker accounts, pures with appropriate restrictions
 
 ### Intelligent Progression
-- **Dependency resolution** - Automatic quest prerequisite handling
 - **Level-based method transitions** - Switch training methods at optimal levels
 - **Quest XP optimization** - Use quest rewards to skip early training levels
 - **Conditional logic** - Different approaches based on account type and progression
@@ -135,5 +134,6 @@ The system uses a modular architecture where:
 - **Markdown files** provide human-readable documentation and AI instructions
 - **Routine files** combine modules into complete account progression scripts
 - **Dependency resolution** ensures proper task ordering and prerequisites
+
 
 This design allows for flexible, maintainable account progression definitions that can adapt to different account types and goals while ensuring all requirements are properly handled.
