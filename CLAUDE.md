@@ -59,10 +59,12 @@ Account scripts follow a structured approach:
 ### JSON Configuration System
 The system is built on interconnected JSON files that define behavior:
 
-**Dependency Resolution**: `capabilities/quest/quests.json` creates a directed acyclic graph (DAG) where each quest defines:
+**Quest Prerequisites**: `capabilities/quest/quests.json` creates a directed acyclic graph (DAG) where each quest defines:
 - Required skill levels before starting
 - Prerequisite quests that must be completed first
 - Special conditions or recommendations
+
+**Item Dependency Resolution**: The system automatically resolves item dependencies (e.g., if you need a steel bar, it will make one), but quest dependencies must be manually ordered in routines.
 
 **Progressive Training**: `capabilities/skill/skill.json` defines level-based method transitions:
 - Multiple training methods per skill with efficiency rankings
@@ -70,7 +72,7 @@ The system is built on interconnected JSON files that define behavior:
 - Account type specialization (ironman vs regular paths)
 - Quest requirements for specific training methods
 
-**Cross-Module Dependencies**: Training methods can require quest completion, quests can unlock new training methods, creating complex interdependencies that the system resolves automatically.
+**Cross-Module Dependencies**: Training methods can require quest completion, quests can unlock new training methods. The system automatically resolves item dependencies, but quest prerequisites must be manually sequenced in routines.
 
 ### Task Syntax Advanced Patterns
 
@@ -88,7 +90,7 @@ The system is built on interconnected JSON files that define behavior:
 
 **Implicit System Rules**:
 - Tasks execute sequentially, preventing premature attempts
-- All prerequisites auto-checked before task execution
+- Item dependencies auto-resolved (e.g., crafting materials), but quest order must be planned manually
 - Account type filtering prevents inappropriate methods
 - Level consistency validation (cannot train to lower level)
 
@@ -135,7 +137,7 @@ cat routines/example_account.r | grep -E "^(SKILL|QUEST|MILESTONE|MINIGAME|ACQUI
 2. Add requirements and dependencies
 3. Document in corresponding `.md` file for AI context
 4. Test integration in routine files
-5. Validate dependency resolution works correctly
+5. Validate item dependency resolution works correctly
 
 ### Modifying Existing Methods
 1. Update JSON configuration with new parameters
@@ -145,7 +147,7 @@ cat routines/example_account.r | grep -E "^(SKILL|QUEST|MILESTONE|MINIGAME|ACQUI
 
 ### Creating New Routines
 1. Define account goals and build type specialization  
-2. Plan progression considering quest/skill dependencies
+2. Plan progression considering quest/skill dependencies (quest order must be manually planned)
 3. Structure: early game foundation → skill unlocks → advanced content
 4. Add resource management (REPEATING tasks) at appropriate points
 5. Optimize task ordering for efficiency and logical flow
