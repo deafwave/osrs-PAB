@@ -15,6 +15,7 @@ export interface Requirements {
   skills?: Partial<Record<AllSkillNames, number>>;
   quests?: string[];
   other?: string[];
+  items?: string[];
 }
 
 // Quest data structure
@@ -144,7 +145,7 @@ export interface AcquisitionMethod {
 }
 
 export interface AcquireConfig {
-  [itemName: string]: AcquisitionMethod[];
+  [itemName: string]: Requirements
 }
 
 // Generic capability interface for user information

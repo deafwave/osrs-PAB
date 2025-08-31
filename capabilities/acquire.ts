@@ -1,245 +1,270 @@
 import type { AcquireConfig } from './types';
 
 export const acquireConfig: AcquireConfig = {
-  "Potato seed": [{
-    "method": "Buy from NPC shop",
-    "location": "Various seed shops",
-    "requirements": [],
-    "notes": "Often grouped with other seeds from same shop"
-  }, {
-    "method": "Pickpocket Master Farmer",
-    "location": "Various locations",
-    "requirements": ["38 Thieving"],
-    "skill": "thieving",
-    "account_type": "Ironman preferred"
-  }],
-  "Hammerstone seed": [{
-    "method": "Buy from NPC shop",
-    "location": "Various seed shops",
-    "requirements": [],
-    "notes": "Often grouped with other seeds from same shop"
-  }, {
-    "method": "Pickpocket Master Farmer",
-    "location": "Various locations",
-    "requirements": ["38 Thieving"],
-    "skill": "thieving",
-    "account_type": "Ironman preferred"
-  }],
-  "Onion seed": [{
-    "method": "Buy from NPC shop",
-    "location": "Various seed shops",
-    "requirements": [],
-    "notes": "Often grouped with other seeds from same shop"
-  }, {
-    "method": "Pickpocket Master Farmer",
-    "location": "Various locations",
-    "requirements": ["38 Thieving"],
-    "skill": "thieving",
-    "account_type": "Ironman preferred"
-  }],
-  "Molten glass": [{
-    "method": "Glassblowing",
-    "location": "Various furnaces",
-    "requirements": ["Crafting level", "Bucket of sand", "Soda ash"],
-    "skill": "crafting"
-  }],
-  "Logs": [{
-    "method": "Woodcutting",
-    "location": "Various tree locations",
-    "requirements": ["Bronze axe or better"],
-    "skill": "woodcutting"
-  }],
-  "Oak logs": [{
-    "method": "Woodcutting oak trees",
-    "location": "Various oak tree locations",
-    "requirements": ["Bronze axe or better", "15 Woodcutting"],
-    "skill": "woodcutting"
-  }],
-  "Willow logs": [{
-    "method": "Woodcutting willow trees",
-    "location": "Various willow tree locations",
-    "requirements": ["Bronze axe or better", "30 Woodcutting"],
-    "skill": "woodcutting"
-  }],
-  "Maple logs": [{
-    "method": "Woodcutting maple trees",
-    "location": "Various maple tree locations",
-    "requirements": ["Bronze axe or better", "45 Woodcutting"],
-    "skill": "woodcutting"
-  }],
-  "Silver bar": [{
-    "method": "Smelting silver ore",
-    "location": "Furnaces",
-    "requirements": ["Silver ore", "20 Smithing"],
-    "skill": "smithing"
-  }],
-  "Gold bar": [{
-    "method": "Smelting gold ore",
-    "location": "Furnaces",
-    "requirements": ["Gold ore", "40 Smithing"],
-    "skill": "smithing",
-    "notes": "Goldsmith gauntlets recommended"
-  }],
-  "Iron ore": [{
-    "method": "Mining iron rocks",
-    "location": "Various mining sites",
-    "requirements": ["Pickaxe", "15 Mining"],
-    "skill": "mining"
-  }, {
-    "method": "Buy from NPC shop",
-    "location": "Ore shops",
-    "requirements": [],
-    "account_type": "Regular accounts"
-  }],
-  "Unpowered orb": [{
-    "method": "Glassblowing",
-    "location": "Any furnace with glassblowing pipe",
-    "requirements": ["Molten glass", "46 Crafting", "Glassblowing pipe"],
-    "skill": "crafting"
-  }],
-  "Dragon bones": [{
-    "method": "Buy from NPC shop",
-    "location": "Various bone shops",
-    "requirements": [],
-    "account_type": "Regular accounts"
-  }, {
-    "method": "Kill dragons",
-    "location": "Various dragon locations",
-    "requirements": ["Combat stats", "Anti-dragon shield or antifire"],
-    "account_type": "Ironman"
-  }],
-  "Willow longbow": [{
-    "method": "Fletching",
-    "location": "Anywhere",
-    "requirements": ["Willow logs", "Bowstring", "40 Fletching", "Knife"],
-    "skill": "fletching"
-  }],
-  "Ring of dueling(8)": [{
-    "method": "Jewelry crafting",
-    "location": "Furnace with jewelry mould",
-    "requirements": ["Emerald", "Gold bar", "Ring mould", "40 Crafting"],
-    "skill": "crafting",
-    "notes": "Requires gems or ability to mine them from Shilo Village"
-  }],
-  "Ring of recoil": [{
-    "method": "Jewelry crafting",
-    "location": "Furnace with jewelry mould",
-    "requirements": ["Sapphire", "Gold bar", "Ring mould", "20 Crafting"],
-    "skill": "crafting",
-    "notes": "Requires gems or ability to mine them from Shilo Village"
-  }],
-  "Games necklace(8)": [{
-    "method": "Jewelry crafting",
-    "location": "Furnace with jewelry mould",
-    "requirements": ["Sapphire", "Gold bar", "Necklace mould", "20 Crafting"],
-    "skill": "crafting",
-    "notes": "Requires gems or ability to mine them from Shilo Village"
-  }],
-  "Bronze axe": [{
-    "method": "Buy from NPC shop",
-    "location": "Various tool shops",
-    "requirements": [],
-    "cost": "Low"
-  }, {
-    "method": "Smithing",
-    "location": "Anvil",
-    "requirements": ["Bronze bar", "Hammer", "1 Smithing"],
-    "skill": "smithing"
-  }],
-  "Sapphire": [{
-    "method": "Mining",
-    "location": "Gem rocks (requires Shilo Village)",
-    "requirements": ["Shilo Village quest", "Pickaxe", "40 Mining"],
-    "skill": "mining"
-  }, {
-    "method": "Buy from NPC shop",
-    "location": "Gem shops",
-    "requirements": [],
-    "account_type": "Regular accounts"
-  }],
-  "Steel chainbody": [{
-    "method": "Smithing",
-    "location": "Anvil",
-    "requirements": ["3 Steel bars", "Hammer", "26 Smithing"],
-    "skill": "smithing"
-  }, {
-    "method": "Buy from NPC shop",
-    "location": "Armor shops",
-    "requirements": [],
-    "account_type": "Regular accounts"
-  }],
-  "Steel med helm": [{
-    "method": "Smithing",
-    "location": "Anvil",
-    "requirements": ["1 Steel bar", "Hammer", "20 Smithing"],
-    "skill": "smithing"
-  }, {
-    "method": "Buy from NPC shop",
-    "location": "Armor shops",
-    "requirements": [],
-    "account_type": "Regular accounts"
-  }],
-  "Steel platelegs": [{
-    "method": "Smithing",
-    "location": "Anvil",
-    "requirements": ["3 Steel bars", "Hammer", "26 Smithing"],
-    "skill": "smithing"
-  }, {
-    "method": "Buy from NPC shop",
-    "location": "Armor shops",
-    "requirements": [],
-    "account_type": "Regular accounts"
-  }],
-  "Raw mackerel": [{
-    "method": "Fishing",
-    "location": "Fishing spots",
-    "requirements": ["Fishing net", "16 Fishing"],
-    "skill": "fishing"
-  }],
-  "Fat snail": [{
-    "method": "Kill snails",
-    "location": "Various snail locations",
-    "requirements": ["Combat stats"],
-    "notes": "Dropped by snails"
-  }],
-  "Swamp paste": [{
-    "method": "Buy from NPC shop",
-    "location": "Canifis general store",
-    "requirements": [],
-    "notes": "Used in various quests"
-  }],
-  "Bucket of sand": [{
-    "method": "Buy from NPC shop",
-    "location": "Various shops",
-    "requirements": [],
-    "cost": "Low"
-  }, {
-    "method": "Mining sandstone and grinding",
-    "location": "Desert Quarry",
-    "requirements": ["Pickaxe", "35 Mining", "Desert Treasure access"],
-    "skill": "mining",
-    "account_type": "Ironman preferred",
-    "notes": "Grind sandstone at Camulet or other grindstone"
-  }],
-  "Runes": [{
-    "method": "Buy from NPC shop",
-    "location": "Magic shops",
-    "requirements": [],
-    "cost": "Variable",
-    "notes": "Most runes purchased from vendors"
-  }],
-  "Wines": [{
-    "method": "Buy from NPC shop",
-    "location": "Various shops",
-    "requirements": [],
-    "cost": "Low",
-    "notes": "Commonly purchased item"
-  }],
-  "Cheese potatoes": [{
-    "method": "Buy from NPC shop",
-    "location": "Various food shops",
-    "requirements": [],
-    "cost": "Low",
-    "notes": "Commonly purchased food item"
-  }]
+  /** Available from seed shops or by pickpocketing Master Farmers */
+  "Potato seed": {
+    skills: { thieving: 38 },
+    other: ["Pickpocket Master Farmers for ironman"]
+  },
+  /** Available from seed shops or by pickpocketing Master Farmers */
+  "Hammerstone seed": {
+    skills: { thieving: 38 },
+    other: ["Pickpocket Master Farmers for ironman"]
+  },
+  /** Available from seed shops or by pickpocketing Master Farmers */
+  "Onion seed": {
+    skills: { thieving: 38 },
+    other: ["Pickpocket Master Farmers for ironman"]
+  },
+  /** Made by using bucket of sand + soda ash at furnace */
+  "Molten glass": {
+    skills: { crafting: 1 }
+  },
+  /** Cut from trees with any axe */
+  "Logs": {
+    skills: { woodcutting: 1 }
+  },
+  /** Cut from oak trees with any axe */
+  "Oak logs": {
+    skills: { woodcutting: 15 }
+  },
+  /** Cut from willow trees with any axe */
+  "Willow logs": {
+    skills: { woodcutting: 30 }
+  },
+  /** Cut from maple trees with any axe */
+  "Maple logs": {
+    skills: { woodcutting: 45 }
+  },
+  /** Smelt silver ore at furnace */
+  "Silver bar": {
+    skills: { smithing: 20 }
+  },
+  /** Smelt gold ore at furnace */
+  "Gold bar": {
+    skills: { smithing: 40 },
+    other: ["Goldsmith gauntlets recommended"]
+  },
+  /** Mine from iron rocks with pickaxe or buy from shops */
+  "Iron ore": {
+    skills: { mining: 15 }
+  },
+  /** Made from molten glass with glassblowing pipe at furnace */
+  "Unpowered orb": {
+    skills: { crafting: 46 }
+  },
+  /** Kill dragons or buy from shops */
+  "Dragon bones": {
+    other: ["Anti-dragon protection required"]
+  },
+  /** Made from willow logs + bowstring with knife */
+  "Willow longbow": {
+    skills: { fletching: 40 }
+  },
+  /** Made from emerald + gold bar at furnace with ring mould */
+  "Ring of dueling(8)": {
+    skills: { crafting: 40 }
+  },
+  /** Made from sapphire + gold bar at furnace with ring mould */
+  "Ring of recoil": {
+    skills: { crafting: 20 }
+  },
+  /** Made from sapphire + gold bar at furnace with necklace mould */
+  "Games necklace(8)": {
+    skills: { crafting: 20 }
+  },
+  /** Buy from tool shops or smith from bronze bar at anvil with hammer */
+  "Bronze axe": {
+    skills: { smithing: 1 }
+  },
+  /** Mine from gem rocks or buy from shops */
+  "Sapphire": {
+    skills: { mining: 40 },
+    quests: ["Shilo Village"]
+  },
+  /** Smith from 3 steel bars at anvil or buy from armor shops */
+  "Steel chainbody": {
+    skills: { smithing: 26 }
+  },
+  /** Smith from 1 steel bar at anvil or buy from armor shops */
+  "Steel med helm": {
+    skills: { smithing: 20 }
+  },
+  /** Smith from 3 steel bars at anvil or buy from armor shops */
+  "Steel platelegs": {
+    skills: { smithing: 26 }
+  },
+  /** Fish with net at fishing spots */
+  "Raw mackerel": {
+    skills: { fishing: 16 }
+  },
+  /** Monster drop from killing snails */
+  "Fat snail": {},
+  /** Buy from Canifis general store */
+  "Swamp paste": {},
+  /** Buy from shops or mine sandstone and grind */
+  "Bucket of sand": {
+    skills: { mining: 35 },
+    quests: ["Desert Treasure access"],
+    other: ["Ironman preferred method: mine sandstone and grind"]
+  },
+  /** Buy from magic shops or runecraft at altars */
+  "Runes": {},
+  /** Buy from various shops */
+  "Wines": {},
+  /** Buy from food shops */
+  "Cheese potatoes": {},
+  /** Quest reward from Icthlarin's Little Helper */
+  "Catspeak amulet": {
+    quests: ["Icthlarin's Little Helper"]
+  },
+  /** Buy from magic shops or runecraft at death altar */
+  "Death rune": {
+    skills: { runecrafting: 65 },
+    items: ["Death talisman"]
+  },
+  /** Buy from cooking shops or cook with cake tin + chocolate bar */
+  "Chocolate cake": {
+    skills: { cooking: 40 },
+    items: ["Cake tin", "Chocolate bar"]
+  },
+  /** Buy from general stores */
+  "Tinderbox": {},
+  /** Buy from cooking shops or milk cows with bucket */
+  "Bucket of milk": {
+    items: ["Bucket"]
+  },
+  /** Buy from crafting shops */
+  "Shears": {},
+  /** Buy from herblore shops or fill vials at water sources */
+  "Vial of water": {
+    items: ["Vial"]
+  },
+  /** Buy from Canifis general store */
+  "Bullseye lantern": {},
+  /** Buy from Canifis general store */
+  "Swamp tar": {},
+  /** Buy from crafting shops */
+  "Chisel": {},
+  /** Buy from mining shops */
+  "Pickaxe": {},
+  /** Buy from general stores */
+  "Rope": {},
+  /** Buy from Freda in Burthorpe */
+  "Climbing boots": {},
+  /** Buy from Barbarian Outpost */
+  "Vodka": {},
+  /** Buy from cooking shops */
+  "Pineapple chunks": {},
+  /** Buy from cooking shops */
+  "Grain": {},
+  /** Buy from meat shops or kill chickens */
+  "Raw chicken": {},
+  /** Buy from herblore shops */
+  "Pestle and mortar": {},
+  /** Mix ranarr weed + vial of water */
+  "Ranarr potion (unf)": {
+    skills: { herblore: 25 },
+    items: ["Ranarr weed", "Vial of water"]
+  },
+  "Seal of passage": {
+    quests: ["Lunar Diplomacy"],
+    other: ["Quest reward"]
+  },
+  "Goutweed": {
+    quests: ["Eadgar's Ruse"],
+    other: ["Quest reward"]
+  },
+  "Astral rune": {
+    skills: { runecrafting: 40 },
+    quests: ["Lunar Diplomacy"],
+    other: ["Buy from Lunar Isle", "Runecraft at astral altar (ironman)"]
+  },
+  "Hammer": {
+    other: ["Buy from general stores"]
+  },
+  "Mith grapple": {
+    skills: { smithing: 59, fletching: 59 },
+    other: ["Smith mithril bar then fletch with rope"]
+  },
+  "Crossbow": {
+    other: ["Buy from crossbow shops"]
+  },
+  "Ring of charos": {
+    quests: ["Creature of Fenkenstrain"],
+    other: ["Quest reward"]
+  },
+  "Ring of charos(a)": {
+    quests: ["Creature of Fenkenstrain", "Garden of Tranquillity"],
+    other: ["Activate Ring of charos during Garden of Tranquillity"]
+  },
+  "Spade": {
+    other: ["Buy from general stores"]
+  },
+  "Secateurs": {
+    other: ["Buy from farming shops"]
+  },
+  "Watering can": {
+    other: ["Buy from farming shops"]
+  },
+  "Gardening trowel": {
+    other: ["Buy from farming shops"]
+  },
+  "Plant cure": {
+    other: ["Buy from farming shops"]
+  },
+  "Marigold seed": {
+    skills: { thieving: 38 },
+    other: ["Buy from seed shops", "Pickpocket Master Farmers (ironman)"]
+  },
+  "Cabbage seed": {
+    skills: { thieving: 38 },
+    other: ["Buy from seed shops", "Pickpocket Master Farmers (ironman)"]
+  },
+  "Rune essence": {
+    skills: { mining: 1 },
+    quests: ["Rune Mysteries"],
+    other: ["Buy from magic shops", "Mine at Rune Essence Mine (ironman)"]
+  },
+  "Filled plant pot": {
+    other: ["Buy from farming shops", "Fill plant pot with soil using gardening trowel (ironman)"]
+  },
+  "Ultracompost": {
+    other: ["Buy from farming shops", "Make at compost bin with volcanic ash + supercompost (ironman)"]
+  },
+  "Cooked meat": {
+    skills: { cooking: 1 },
+    other: ["Buy from meat shops", "Cook raw meat (ironman)"]
+  },
+  "Bread": {
+    other: ["Buy from food shops"]
+  },
+  "Knife": {
+    other: ["Buy from general stores"]
+  },
+  "Beer": {
+    other: ["Buy from pub shops"]
+  },
+  "Lantern lens": {
+    skills: { crafting: 49 },
+    other: ["Make from molten glass with glassblowing pipe at furnace"]
+  },
+  "Bronze med helm": {
+    skills: { smithing: 3 },
+    other: ["Buy from armor shops", "Smith from 1 bronze bar at anvil"]
+  },
+  "Iron chainbody": {
+    skills: { smithing: 26 },
+    other: ["Buy from armor shops", "Smith from 3 iron bars at anvil"]
+  },
+  "Sapphire lantern": {
+    skills: { crafting: 49 },
+    other: ["Combine sapphire + lantern lens at furnace"]
+  },
+  "Rake": {
+    other: ["Buy from farming shops"]
+  },
+  "Seed dibber": {
+    other: ["Buy from farming shops"]
+  }
 };
