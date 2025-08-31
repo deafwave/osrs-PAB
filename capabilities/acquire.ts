@@ -167,104 +167,104 @@ export const acquireConfig: AcquireConfig = {
     skills: { herblore: 25 },
     items: ["Ranarr weed", "Vial of water"]
   },
+  /** Quest reward from Lunar Diplomacy */
   "Seal of passage": {
-    quests: ["Lunar Diplomacy"],
-    other: ["Quest reward"]
+    quests: ["Lunar Diplomacy"]
   },
+  /** Quest reward from Eadgar's Ruse */
   "Goutweed": {
-    quests: ["Eadgar's Ruse"],
-    other: ["Quest reward"]
+    quests: ["Eadgar's Ruse"]
   },
+  /** Buy from Lunar Isle or runecraft at astral altar */
   "Astral rune": {
     skills: { runecrafting: 40 },
-    quests: ["Lunar Diplomacy"],
-    other: ["Buy from Lunar Isle", "Runecraft at astral altar (ironman)"]
+    quests: ["Lunar Diplomacy"]
   },
-  "Hammer": {
-    other: ["Buy from general stores"]
-  },
+  /** Buy from general stores */
+  "Hammer": {},
+  /** Smith mithril bar then fletch with rope */
   "Mith grapple": {
     skills: { smithing: 59, fletching: 59 },
-    other: ["Smith mithril bar then fletch with rope"]
+    items: ["Mithril bar", "Rope"]
   },
-  "Crossbow": {
-    other: ["Buy from crossbow shops"]
-  },
+  /** Buy from crossbow shops */
+  "Crossbow": {},
+  /** Quest reward from Creature of Fenkenstrain */
   "Ring of charos": {
-    quests: ["Creature of Fenkenstrain"],
-    other: ["Quest reward"]
+    quests: ["Creature of Fenkenstrain"]
   },
+  /** Activate Ring of charos during Garden of Tranquillity */
   "Ring of charos(a)": {
     quests: ["Creature of Fenkenstrain", "Garden of Tranquillity"],
-    other: ["Activate Ring of charos during Garden of Tranquillity"]
+    items: ["Ring of charos"]
   },
-  "Spade": {
-    other: ["Buy from general stores"]
-  },
-  "Secateurs": {
-    other: ["Buy from farming shops"]
-  },
-  "Watering can": {
-    other: ["Buy from farming shops"]
-  },
-  "Gardening trowel": {
-    other: ["Buy from farming shops"]
-  },
-  "Plant cure": {
-    other: ["Buy from farming shops"]
-  },
+  /** Buy from general stores */
+  "Spade": {},
+  /** Buy from farming shops */
+  "Secateurs": {},
+  /** Buy from farming shops */
+  "Watering can": {},
+  /** Buy from farming shops */
+  "Gardening trowel": {},
+  /** Buy from farming shops */
+  "Plant cure": {},
+  /** Buy from seed shops or pickpocket Master Farmers */
   "Marigold seed": {
     skills: { thieving: 38 },
-    other: ["Buy from seed shops", "Pickpocket Master Farmers (ironman)"]
+    other: ["Ironman preferred: pickpocket Master Farmers"]
   },
+  /** Buy from seed shops or pickpocket Master Farmers */
   "Cabbage seed": {
     skills: { thieving: 38 },
-    other: ["Buy from seed shops", "Pickpocket Master Farmers (ironman)"]
+    other: ["Ironman preferred: pickpocket Master Farmers"]
   },
+  /** Buy from magic shops or mine at Rune Essence Mine */
   "Rune essence": {
     skills: { mining: 1 },
     quests: ["Rune Mysteries"],
-    other: ["Buy from magic shops", "Mine at Rune Essence Mine (ironman)"]
+    items: ["Pickaxe"]
   },
+  /** Buy from farming shops or fill plant pot with soil using gardening trowel */
   "Filled plant pot": {
-    other: ["Buy from farming shops", "Fill plant pot with soil using gardening trowel (ironman)"]
+    items: ["Plant pot", "Gardening trowel"]
   },
+  /** Buy from farming shops or make at compost bin */
   "Ultracompost": {
-    other: ["Buy from farming shops", "Make at compost bin with volcanic ash + supercompost (ironman)"]
+    items: ["Volcanic ash", "Supercompost"]
   },
+  /** Buy from meat shops or cook raw meat */
   "Cooked meat": {
     skills: { cooking: 1 },
-    other: ["Buy from meat shops", "Cook raw meat (ironman)"]
+    items: ["Raw meat"]
   },
-  "Bread": {
-    other: ["Buy from food shops"]
-  },
-  "Knife": {
-    other: ["Buy from general stores"]
-  },
-  "Beer": {
-    other: ["Buy from pub shops"]
-  },
+  /** Buy from food shops */
+  "Bread": {},
+  /** Buy from general stores */
+  "Knife": {},
+  /** Buy from pub shops */
+  "Beer": {},
+  /** Make from molten glass with glassblowing pipe at furnace */
   "Lantern lens": {
     skills: { crafting: 49 },
-    other: ["Make from molten glass with glassblowing pipe at furnace"]
+    items: ["Molten glass", "Glassblowing pipe"]
   },
+  /** Buy from armor shops or smith from 1 bronze bar at anvil */
   "Bronze med helm": {
     skills: { smithing: 3 },
-    other: ["Buy from armor shops", "Smith from 1 bronze bar at anvil"]
+    items: ["Bronze bar", "Hammer"]
   },
+  /** Buy from armor shops or smith from 3 iron bars at anvil */
   "Iron chainbody": {
     skills: { smithing: 26 },
-    other: ["Buy from armor shops", "Smith from 3 iron bars at anvil"]
+    items: ["Iron bar", "Hammer"]
   },
+  /** Combine sapphire + lantern lens at furnace */
   "Sapphire lantern": {
     skills: { crafting: 49 },
-    other: ["Combine sapphire + lantern lens at furnace"]
+    items: ["Sapphire", "Lantern lens"]
   },
-  "Rake": {
-    other: ["Buy from farming shops"]
-  },
-  "Seed dibber": {
-    other: ["Buy from farming shops"]
-  }
+  /** Buy from farming shops */
+  "Rake": {},
+  /** Buy from farming shops */
+  "Seed dibber": {}
 };
