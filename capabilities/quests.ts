@@ -126,5 +126,6 @@ export const questsConfig: QuestsConfig = {
   "ZOGRE_FLESH_EATERS": {"requirements": {"skills": {"smithing": 4, "herblore": 8}, "quests": ["JUNGLE_POTION", "BIG_CHOMPY_BIRD_HUNTING"], "other": []}},
   "RUM_DEAL": {"requirements": {"skills": {"crafting": 42, "fishing": 50, "farming": 40, "prayer": 47, "slayer": 42}, "quests": ["PRIEST_IN_PERIL", "ZOGRE_FLESH_EATERS"], "other": []}},
   "CABIN_FEVER": {"requirements": {"skills": {"agility": 42, "crafting": 45, "smithing": 50, "ranged": 40}, "quests": ["PIRATES_TREASURE", "RUM_DEAL"], "other": []}},
-  "THE_EYES_OF_GLOUPHRIE": {"requirements": {"skills": {"magic": 46, "construction": 5, "runecrafting": 13}, "quests": ["THE_GRAND_TREE"], "other": []}}
+  "THE_EYES_OF_GLOUPHRIE": {"requirements": {"skills": {"magic": 46, "construction": 5, "runecrafting": 13}, "quests": ["THE_GRAND_TREE"], "other": []}},
+  "THE_SLUG_MENACE": {"requirements": {"skills": {"crafting": 30, "runecrafting": 30, "slayer": 30, "thieving": 30}, "quests": ["WANTED", "SEA_SLUG"], "other": []}}
 };
