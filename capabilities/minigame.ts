@@ -24,5 +24,10 @@ export const minigamesConfig: MinigamesConfig = {
     "integrated_into": "SKILL:RUNECRAFTING",
     "requirements": {"skills": {"runecrafting": 27}, "quests": ["TEMPLE_OF_THE_EYE"], "other": []},
     "auto_enabled": true
+  },
+  "GIANTS_FOUNDRY": {
+    "requirements": {"skills": {"smithing": 15}, "quests": ["SLEEPING_GIANTS"], "other": []},
+    "targets": ["level", "MOULD", "TOP", "LEGS", "GLOVES", "BOOTS", "COLOSSAL", "STEEL_MITHRIL", "MITHRIL_ADAMANT", "ADAMANT_RUNE"],
+    "rewards": ["smithing_xp", "smiths_outfit", "moulds"]
   }
 };

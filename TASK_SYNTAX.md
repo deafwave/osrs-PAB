@@ -100,6 +100,22 @@ See individual skill modules for complete method breakdowns and level splits.
 - **Requirements**: Temple of the Eye quest
 - **Do not add as separate task** - handled automatically
 
+### Giants Foundry
+- **Level targets**: `MINIGAME:GIANTS_FOUNDRY:90` or `MINIGAME:GF:90`
+- **Equipment targets**: 
+  - `MINIGAME:GF:MOULD` - Double ammo mould
+  - `MINIGAME:GF:TOP` - Smiths top
+  - `MINIGAME:GF:LEGS` - Smiths trousers  
+  - `MINIGAME:GF:GLOVES` - Smiths gloves
+  - `MINIGAME:GF:BOOTS` - Smiths boots
+  - `MINIGAME:GF:COLOSSAL` - Colossal blade
+- **Alloy selection**: Force specific alloys by adding to task name
+  - `MINIGAME:GF:STEEL_MITHRIL` - Use steel+mithril alloy
+  - `MINIGAME:GF:MITHRIL_ADAMANT` - Use mithril+adamant alloy  
+  - `MINIGAME:GF:ADAMANT_RUNE` - Use adamant+rune alloy
+- **Requirements**: 15 Smithing, Sleeping Giants quest
+- **Auto-behavior**: Uses highest XP alloy for regular accounts, available alloys for ironman
+
 ## Achievement Diary Tasks
 
 ### Basic Syntax
