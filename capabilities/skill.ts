@@ -16,9 +16,16 @@ export const skillsConfig: SkillsConfig = {
         skills: {
           firemaking: 50
         }
+      },
+      unlocked_by: {
+        quests: ["DRUIDIC_RITUAL"]
       }
     }],
     suggested_quests: ["SEA_SLUG"],
+    prerequisites: {
+      recommended_quests: ["SEA_SLUG"],
+      unlocks: ["MINIGAME:WINTERTODT"]
+    }
   },
   "crafting": {
     methods: [{
@@ -26,7 +33,8 @@ export const skillsConfig: SkillsConfig = {
       requirements: {
         skills: {
           crafting: 1
-        }
+        },
+        items: ["molten_glass", "glassblowing_pipe"]
       }
     },
     {

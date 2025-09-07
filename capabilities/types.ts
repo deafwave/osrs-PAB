@@ -16,12 +16,26 @@ export interface Requirements {
   quests?: string[];
   other?: string[];
   items?: string[];
+  milestones?: string[];
+  diaries?: string[];
 }
 
 // Quest data structure
 export interface QuestData {
   requirements: Requirements;
   parameters?: Record<string, string>;
+  unlocks?: {
+    skills?: string[];
+    areas?: string[];
+    items?: string[];
+    milestones?: string[];
+    teleports?: string[];
+  };
+  rewards?: {
+    experience?: Record<SkillName, number>;
+    items?: string[];
+    access?: string[];
+  };
 }
 
 export interface QuestsConfig {
@@ -33,8 +47,18 @@ export interface SkillMethodConfig {
   methods: {
       name: string
       requirements: Requirements;
+      unlocked_by?: {
+        quests?: string[];
+        milestones?: string[];
+        items?: string[];
+      };
   }[];
   suggested_quests?: string[];
+  prerequisites?: {
+    recommended_quests?: string[];
+    required_items?: string[];
+    unlocks?: string[];
+  };
   parameters?: Record<string, string>;
 }
 
@@ -77,8 +101,17 @@ export interface MilestoneData {
   location?: string;
   account_types?: string[];
   rewards?: string[];
-  unlocks?: string[];
+  unlocks?: {
+    skills?: string[];
+    areas?: string[];
+    items?: string[];
+    activities?: string[];
+  };
   completion?: string;
+  prerequisites?: {
+    recommended_before?: string[];
+    synergizes_with?: string[];
+  };
 }
 
 export interface MilestonesConfig {

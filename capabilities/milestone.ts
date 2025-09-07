@@ -4,7 +4,14 @@ export const milestonesConfig: MilestonesConfig = {
   "DRAGON_DEFENDER": {
     "requirements": {"skills": {"attack_strength_combined": 130}, "quests": [], "other": []},
     "location": "warriors_guild",
-    "rewards": ["dragon_defender"]
+    "rewards": ["dragon_defender"],
+    "unlocks": {
+      "activities": ["high_level_melee_training"],
+      "items": ["bis_melee_offhand"]
+    },
+    "prerequisites": {
+      "recommended_before": ["SKILL:ATTACK:60", "SKILL:STRENGTH:60"]
+    }
   },
   "RUNE_DEFENDER": {
     "requirements": {"skills": {"attack_strength_combined": 130}, "quests": [], "other": []},
@@ -14,8 +21,14 @@ export const milestonesConfig: MilestonesConfig = {
   },
   "FAIRY_RINGS": {
     "requirements": {"skills": {}, "quests": ["FAIRYTALE_I"], "other": []},
-    "unlocks": ["fairy_ring_network"],
-    "completion": "partial_fairytale_ii"
+    "unlocks": {
+      "areas": ["fairy_ring_network", "all_fairy_ring_locations"],
+      "activities": ["efficient_transportation"]
+    },
+    "completion": "partial_fairytale_ii",
+    "prerequisites": {
+      "synergizes_with": ["SKILL:AGILITY:70", "graceful_outfit"]
+    }
   },
   "UNLOCK_PIETY": {
     "requirements": {"skills": {"attack": 60, "strength": 50}, "quests": ["KINGS_RANSOM"], "other": []},
@@ -34,6 +47,14 @@ export const milestonesConfig: MilestonesConfig = {
   "BLACK_MASK": {
     "requirements": {"skills": {"slayer": 58}, "quests": ["CABIN_FEVER"], "other": []},
     "location": "cave_horrors",
-    "rewards": ["black_mask"]
+    "rewards": ["black_mask"],
+    "unlocks": {
+      "items": ["slayer_helmet", "black_mask_imbued"],
+      "activities": ["efficient_slayer_training"]
+    },
+    "prerequisites": {
+      "recommended_before": ["MILESTONE:FAIRY_RINGS"],
+      "synergizes_with": ["SKILL:COMBAT:70+"]
+    }
   }
 };

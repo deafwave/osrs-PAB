@@ -3,7 +3,16 @@ import type { QuestsConfig } from './types';
 export const questsConfig: QuestsConfig = {
   "COOKS_ASSISTANT": {"requirements": {"skills": {}, "quests": [], "other": []}},
   "DORICS_QUEST": {"requirements": {"skills": {}, "quests": [], "other": []}},
-  "DRUIDIC_RITUAL": {"requirements": {"skills": {}, "quests": [], "other": []}},
+  "DRUIDIC_RITUAL": {
+    "requirements": {"skills": {}, "quests": [], "other": []},
+    "unlocks": {
+      "skills": ["herblore"],
+      "areas": ["taverley_dungeon"]
+    },
+    "rewards": {
+      "experience": {"herblore": 250}
+    }
+  },
   "IMP_CATCHER": {"requirements": {"skills": {}, "quests": [], "other": []}},
   "DWARF_CANNON": {"requirements": {"skills": {}, "quests": [], "other": []}},
   "NATURAL_HISTORY_QUIZ": {"requirements": {"skills": {}, "quests": [], "other": []}},
@@ -25,7 +34,12 @@ export const questsConfig: QuestsConfig = {
   "THE_RESTLESS_GHOST": {"requirements": {"skills": {}, "quests": [], "other": []}},
   "RUNE_MYSTERIES": {"requirements": {"skills": {}, "quests": [], "other": []}},
   "VAMPYRE_SLAYER": {"requirements": {"skills": {"magic": 9}, "quests": [], "other": ["Earth Strike spell"]}},
-  "WATERFALL_QUEST": {"requirements": {"skills": {}, "quests": [], "other": ["43 prayer and/or 20+ hitpoints recommended"]}},
+  "WATERFALL_QUEST": {
+    "requirements": {"skills": {}, "quests": [], "other": ["43 prayer and/or 20+ hitpoints recommended"]},
+    "rewards": {
+      "experience": {"attack": 13750, "strength": 13750}
+    }
+  },
   "PLAGUE_CITY": {"requirements": {"skills": {}, "quests": [], "other": []}},
   "BIOHAZARD": {"requirements": {"skills": {"magic": 9}, "quests": ["PLAGUE_CITY"], "other": ["Earth Strike spell"]}},
   "THE_KNIGHTS_SWORD": {"requirements": {"skills": {"mining": 10}, "quests": [], "other": []}},
@@ -33,17 +47,43 @@ export const questsConfig: QuestsConfig = {
   "MONKS_FRIEND": {"requirements": {"skills": {}, "quests": [], "other": []}},
   "FIGHT_ARENA": {"requirements": {"skills": {"magic": 9, "hitpoints": 20}, "quests": [], "other": []}},
   "TREE_GNOME_VILLAGE": {"requirements": {"skills": {"magic": 9, "hitpoints": 20}, "quests": [], "other": []}},
-  "PRIEST_IN_PERIL": {"requirements": {"skills": {"hitpoints": 20}, "quests": [], "other": ["Enough melee stats to kill temple guardian"]}},
+  "PRIEST_IN_PERIL": {
+    "requirements": {"skills": {"hitpoints": 20}, "quests": [], "other": ["Enough melee stats to kill temple guardian"]},
+    "unlocks": {
+      "areas": ["morytania", "canifis", "slayer_tower"],
+      "skills": ["slayer_assignments"]
+    },
+    "rewards": {
+      "experience": {"prayer": 1406, "crafting": 1406}
+    }
+  },
   "NATURE_SPIRIT": {"requirements": {"skills": {"magic": 35, "hitpoints": 20, "prayer": 43}, "quests": [], "other": []}},
   "RFD_COOK": {"requirements": {"skills": {"cooking": 10}, "quests": ["COOKS_ASSISTANT"], "other": []}},
   "RFD_DWARF": {"requirements": {"skills": {}, "quests": ["RFD_COOK", "FISHING_CONTEST", "COOKS_ASSISTANT"], "other": []}},
   "FISHING_CONTEST": {"requirements": {"skills": {"fishing": 10}, "quests": [], "other": []}},
   "A_PORCINE_OF_INTEREST": {"requirements": {"skills": {"magic": 35, "hitpoints": 20}, "quests": [], "other": []}},
-  "ANIMAL_MAGNETISM": {"requirements": {"skills": {"crafting": 18, "ranged": 30, "woodcutting": 35, "slayer": 18}, "quests": ["THE_RESTLESS_GHOST", "PRIEST_IN_PERIL", "ERNEST_THE_CHICKEN"], "other": []}},
+  "ANIMAL_MAGNETISM": {
+    "requirements": {"skills": {"crafting": 18, "ranged": 30, "woodcutting": 35, "slayer": 18}, "quests": ["THE_RESTLESS_GHOST", "PRIEST_IN_PERIL", "ERNEST_THE_CHICKEN"], "other": []},
+    "unlocks": {
+      "items": ["avas_attractor", "avas_accumulator"]
+    },
+    "rewards": {
+      "experience": {"woodcutting": 1000, "fletching": 1000, "crafting": 1000, "slayer": 1000}
+    }
+  },
   "MERLINS_CRYSTAL": {"requirements": {"skills": {"magic": 35, "hitpoints": 20}, "quests": [], "other": []}},
   "HOLY_GRAIL": {"requirements": {"skills": {"magic": 35, "hitpoints": 20}, "quests": ["MERLINS_CRYSTAL"], "other": []}},
   "DRAGON_SLAYER_I": {"requirements": {"skills": {"magic": 41, "prayer": 43}, "quests": [], "other": ["42 quest points", "Enough stats to not get rekt by Elvarg"]}},
-  "LOST_CITY": {"requirements": {"skills": {"crafting": 31, "woodcutting": 36, "magic": 39}, "quests": [], "other": []}},
+  "LOST_CITY": {
+    "requirements": {"skills": {"crafting": 31, "woodcutting": 36, "magic": 39}, "quests": [], "other": []},
+    "unlocks": {
+      "items": ["dragon_longsword", "dragon_dagger"],
+      "areas": ["zanaris"]
+    },
+    "rewards": {
+      "experience": {"attack": 2500, "strength": 2500, "defence": 2500}
+    }
+  },
   "WHAT_LIES_BELOW": {"requirements": {"skills": {"magic": 35, "hitpoints": 20, "runecrafting": 35, "mining": 42}, "quests": [], "other": []}},
   "THE_DIG_SITE": {"requirements": {"skills": {"agility": 10, "herblore": 10, "thieving": 25}, "quests": [], "other": []}},
   "THE_GRAND_TREE": {"requirements": {"skills": {"magic": 13, "agility": 25}, "quests": ["TREE_GNOME_VILLAGE"], "other": []}},

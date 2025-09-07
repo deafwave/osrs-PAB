@@ -4,12 +4,20 @@ export const minigamesConfig: MinigamesConfig = {
   "WINTERTODT": {
     "requirements": {"skills": {"firemaking": 50}, "quests": [], "other": []},
     "rewards": ["firemaking_xp", "pyromancer_outfit", "supplies"],
-    "auto_rewards": {"conditions": ["<500k_gp", "<4_pyro_pieces"]}
+    "auto_rewards": {"conditions": ["<500k_gp", "<4_pyro_pieces"]},
+    "prerequisites": {
+      "synergizes_with": ["SKILL:HITPOINTS:10+", "warm_clothing"],
+      "unlocked_by": ["SKILL:FIREMAKING:50"]
+    }
   },
   "MLM": {
     "requirements": {"skills": {"mining": 30}, "quests": [], "other": []},
     "targets": ["level", "COALBAG", "GEMBAG", "SET", "HAT", "TOP", "LEGS", "BOOTS"],
-    "auto_unlocks": {"on_level_target": ["coal_bag", "upper_level", "upper_hopper"]}
+    "auto_unlocks": {"on_level_target": ["coal_bag", "upper_level", "upper_hopper"]},
+    "prerequisites": {
+      "recommended_before": ["SKILL:MINING:72"],
+      "synergizes_with": ["MILESTONE:FAIRY_RINGS", "varrock_armour"]
+    }
   },
   "MTA": {
     "requirements": {"skills": {"magic": "variable" as any}, "quests": [], "other": []},
