@@ -30,5 +30,10 @@ export const milestonesConfig: MilestonesConfig = {
   "ROCK_CAKE": {
     "requirements": {"skills": {}, "quests": ["RFD_DWARF"], "other": []},
     "rewards": ["dwarven_rock_cake"]
+  },
+  "BLACK_MASK": {
+    "requirements": {"skills": {"slayer": 58}, "quests": ["CABIN_FEVER"], "other": []},
+    "location": "cave_horrors",
+    "rewards": ["black_mask"]
   }
 };
