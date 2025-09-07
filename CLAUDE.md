@@ -12,27 +12,46 @@ PAB (Player Account Builder) is a task syntax and configuration system for Old S
 
 This is **not a buildable application** - the TypeScript files serve as structured data storage with type safety, not executable code.
 
+## Commands
+
+This codebase has no build system, test suite, or linting commands. It's a pure data/configuration repository where:
+- TypeScript files are validated by your IDE's TypeScript language server
+- `.r` files follow the custom task syntax documented in `TASK_SYNTAX.md`
+- No compilation, transpilation, or execution occurs
+
 ## Architecture
 
 ### Core Data Structure (`/capabilities/`)
 
-The TypeScript files define the game's mechanics and requirements:
+The TypeScript files define the game's mechanics and requirements using a standardized `Requirements` interface:
 
-- **`types.ts`** - Central type definitions for all game elements (skills, quests, requirements, etc.)
-- **`quests.ts`** - Quest prerequisites and requirements data
-- **`skill.ts`** - Skill training methods and level splits
+- **`types.ts`** - Central type definitions including `SkillName`, `Requirements` interface, and `QuestData` structures
+- **`quests.ts`** - Quest prerequisites, requirements, unlocks, and rewards using `QuestsConfig` interface
+- **`skill.ts`** - Skill training methods with level splits and progression paths
 - **`milestone.ts`** - Major account milestones (defenders, fairy rings, etc.)
 - **`minigame.ts`** - Minigame configurations (Wintertodt, MLM, MTA, etc.)
 - **`diary.ts`** - Achievement diary requirements
 - **`repeating.ts`** - Background tasks (birdhouses, tree runs, kingdom management)
 - **`acquire.ts`** - Item acquisition methods for ironman accounts
+- **`progression_chains.ts`** - Complex progression sequences and dependencies
+- **`other.ts`** - Miscellaneous requirements and configurations
+
+All TypeScript files export configurations that implement interfaces defined in `types.ts`, ensuring type safety and consistency across the data structure.
 
 ### Progression Scripts (`/routines/`)
 
 Account progression files using PAB task syntax:
-- **`.r` files** - Main progression scripts (e.g., `deafwave_pab_list_gim.r`)
-- **`modules/`** - Reusable task modules (e.g., `fairy_ring_rush.r`)
+- **`.r` files** - Main progression scripts with account-specific configurations
+- **`modules/`** - Reusable task modules (e.g., `fairy_ring_rush.r`, `black_mask.r`, `jewelry.r`)
+- **`group-ironman/`** - Group Ironman specific progression files
+- **`resources/`** - Supporting documentation and planning files
 - **`.md` files** - Documentation for specific routes (e.g., `optimal_quest_guide_ironman.md`)
+
+Account progression files often start with metadata comments indicating:
+- Starting GP amounts and transfers
+- Target skill levels and completed content
+- Account type (Legacy, Group Ironman, etc.)
+- Special considerations (proxies, manual tutorial, etc.)
 
 ## Task Syntax
 
